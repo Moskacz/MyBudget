@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6249" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GdV-EU-lQk">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6243"/>
     </dependencies>
     <scenes>
@@ -77,7 +78,7 @@
                     <navigationItem key="navigationItem" id="v9d-go-xqH">
                         <barButtonItem key="rightBarButtonItem" title="Add" id="oOg-3I-co3">
                             <connections>
-                                <segue destination="8H1-a7-GWB" kind="presentation" id="BxK-yp-uMl"/>
+                                <segue destination="lzi-Ma-zSF" kind="presentation" id="mGj-bL-uOY"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -90,37 +91,22 @@
             <point key="canvasLocation" x="1763" y="29"/>
         </scene>
         <!--Add Spending View Controller-->
-        <scene sceneID="W6S-nU-eAN">
+        <scene sceneID="BcM-KA-rqp">
             <objects>
-                <viewController id="8H1-a7-GWB" customClass="AddSpendingViewController" customModule="MyBudget" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="lzi-Ma-zSF" customClass="AddSpendingViewController" customModule="MyBudget" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="bYk-MA-dxk"/>
-                        <viewControllerLayoutGuide type="bottom" id="7i2-fP-mID"/>
+                        <viewControllerLayoutGuide type="top" id="J2C-ei-jaL"/>
+                        <viewControllerLayoutGuide type="bottom" id="vdH-UC-RgJ"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="cCB-VO-tNq">
+                    <view key="view" contentMode="scaleToFill" id="2Rd-XU-v7R">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pOB-sn-hMl">
-                                <rect key="frame" x="277" y="285" width="46" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="addSpendingTapped:" destination="8H1-a7-GWB" eventType="touchUpInside" id="V36-0P-Xm3"/>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="centerX" secondItem="pOB-sn-hMl" secondAttribute="centerX" id="BG7-d0-DcS"/>
-                            <constraint firstAttribute="centerY" secondItem="pOB-sn-hMl" secondAttribute="centerY" id="drK-pe-GKm"/>
-                        </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OJ5-qb-Kjd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bTw-Qz-Pnj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2501" y="29"/>
+            <point key="canvasLocation" x="2540" y="29"/>
         </scene>
         <!--Main Tab Bar Controller-->
         <scene sceneID="nvo-Ky-lfc">
