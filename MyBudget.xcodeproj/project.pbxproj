@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		11D689B065424DAFBC08CBD0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D64CA49CE94147EF8A51B2FA /* libPods.a */; };
 		354707681A448C3600BB31FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354707671A448C3600BB31FC /* AppDelegate.swift */; };
 		3547076B1A448C3600BB31FC /* MyBudget.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 354707691A448C3600BB31FC /* MyBudget.xcdatamodeld */; };
 		3547076D1A448C3600BB31FC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3547076C1A448C3600BB31FC /* ViewController.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3532AE6C1A44B2D40073DDF5 /* MyBudget-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MyBudget-Bridging-Header.h"; sourceTree = "<group>"; };
 		354707621A448C3600BB31FC /* MyBudget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBudget.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		354707661A448C3600BB31FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		354707671A448C3600BB31FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -48,6 +50,8 @@
 		354707901A4499E400BB31FC /* AddSpendingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSpendingViewController.swift; sourceTree = "<group>"; };
 		354707921A449C9E00BB31FC /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		354707941A44AE9A00BB31FC /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		9DE804FADEDC4B0FBC4D8239 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		D64CA49CE94147EF8A51B2FA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11D689B065424DAFBC08CBD0 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,9 +76,12 @@
 		354707591A448C3600BB31FC = {
 			isa = PBXGroup;
 			children = (
+				3532AE6C1A44B2D40073DDF5 /* MyBudget-Bridging-Header.h */,
 				354707641A448C3600BB31FC /* MyBudget */,
 				3547077D1A448C3600BB31FC /* MyBudgetTests */,
 				354707631A448C3600BB31FC /* Products */,
+				9DE804FADEDC4B0FBC4D8239 /* Pods.xcconfig */,
+				AB49C276303249238E3996ED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -130,6 +138,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		AB49C276303249238E3996ED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D64CA49CE94147EF8A51B2FA /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,9 +153,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 354707841A448C3600BB31FC /* Build configuration list for PBXNativeTarget "MyBudget" */;
 			buildPhases = (
+				A3D07CF8C67A438596B12951 /* Check Pods Manifest.lock */,
 				3547075E1A448C3600BB31FC /* Sources */,
 				3547075F1A448C3600BB31FC /* Frameworks */,
 				354707601A448C3600BB31FC /* Resources */,
+				38E1D27CDC974AB9B84F819E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -224,6 +242,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		38E1D27CDC974AB9B84F819E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A3D07CF8C67A438596B12951 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3547075E1A448C3600BB31FC /* Sources */ = {
@@ -358,21 +409,27 @@
 		};
 		354707851A448C3600BB31FC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DE804FADEDC4B0FBC4D8239 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MyBudget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/michalmoskala/Programowanie/iOS/MyBudget/MyBudget-Bridging-Header.h";
 			};
 			name = Debug;
 		};
 		354707861A448C3600BB31FC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DE804FADEDC4B0FBC4D8239 /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MyBudget/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/michalmoskala/Programowanie/iOS/MyBudget/MyBudget-Bridging-Header.h";
 			};
 			name = Release;
 		};
