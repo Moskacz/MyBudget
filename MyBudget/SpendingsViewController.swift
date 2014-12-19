@@ -9,7 +9,7 @@
 import UIKit
 
 class SpendingsViewController: UIViewController, UITableViewDataSource {
-	@IBOutlet weak var tableView: UITableView!
+	@IBOutlet weak var tableView: UITableView!	
 
   override func viewDidLoad() {
     super.viewDidLoad()

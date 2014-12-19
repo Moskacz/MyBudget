@@ -75,7 +75,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="v9d-go-xqH">
-                        <barButtonItem key="rightBarButtonItem" title="Add" id="oOg-3I-co3"/>
+                        <barButtonItem key="rightBarButtonItem" title="Add" id="oOg-3I-co3">
+                            <connections>
+                                <segue destination="8H1-a7-GWB" kind="presentation" id="BxK-yp-uMl"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="yda-fH-voW" id="rAH-NF-wqd"/>
@@ -85,10 +89,43 @@
             </objects>
             <point key="canvasLocation" x="1763" y="29"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Add Spending View Controller-->
+        <scene sceneID="W6S-nU-eAN">
+            <objects>
+                <viewController id="8H1-a7-GWB" customClass="AddSpendingViewController" customModule="MyBudget" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bYk-MA-dxk"/>
+                        <viewControllerLayoutGuide type="bottom" id="7i2-fP-mID"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cCB-VO-tNq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pOB-sn-hMl">
+                                <rect key="frame" x="277" y="285" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addSpendingTapped:" destination="8H1-a7-GWB" eventType="touchUpInside" id="V36-0P-Xm3"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="pOB-sn-hMl" secondAttribute="centerX" id="BG7-d0-DcS"/>
+                            <constraint firstAttribute="centerY" secondItem="pOB-sn-hMl" secondAttribute="centerY" id="drK-pe-GKm"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OJ5-qb-Kjd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2501" y="29"/>
+        </scene>
+        <!--Main Tab Bar Controller-->
         <scene sceneID="nvo-Ky-lfc">
             <objects>
-                <tabBarController id="GdV-EU-lQk" sceneMemberID="viewController">
+                <tabBarController id="GdV-EU-lQk" customClass="MainTabBarController" customModule="MyBudget" customModuleProvider="target" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="7xB-tC-BHs">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>

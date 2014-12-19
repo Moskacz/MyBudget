@@ -16,6 +16,9 @@
 		354707811A448C3600BB31FC /* MyBudgetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354707801A448C3600BB31FC /* MyBudgetTests.swift */; };
 		3547078D1A448EB400BB31FC /* SpendingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3547078C1A448EB400BB31FC /* SpendingsViewController.swift */; };
 		3547078F1A4497E300BB31FC /* Spending.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3547078E1A4497E300BB31FC /* Spending.swift */; };
+		354707911A4499E400BB31FC /* AddSpendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354707901A4499E400BB31FC /* AddSpendingViewController.swift */; };
+		354707931A449C9E00BB31FC /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354707921A449C9E00BB31FC /* CoreDataStack.swift */; };
+		354707951A44AE9A00BB31FC /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354707941A44AE9A00BB31FC /* MainTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +45,9 @@
 		354707801A448C3600BB31FC /* MyBudgetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBudgetTests.swift; sourceTree = "<group>"; };
 		3547078C1A448EB400BB31FC /* SpendingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpendingsViewController.swift; sourceTree = "<group>"; };
 		3547078E1A4497E300BB31FC /* Spending.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spending.swift; sourceTree = "<group>"; };
+		354707901A4499E400BB31FC /* AddSpendingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSpendingViewController.swift; sourceTree = "<group>"; };
+		354707921A449C9E00BB31FC /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		354707941A44AE9A00BB31FC /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +98,9 @@
 				3547078E1A4497E300BB31FC /* Spending.swift */,
 				354707651A448C3600BB31FC /* Supporting Files */,
 				3547078C1A448EB400BB31FC /* SpendingsViewController.swift */,
+				354707901A4499E400BB31FC /* AddSpendingViewController.swift */,
+				354707921A449C9E00BB31FC /* CoreDataStack.swift */,
+				354707941A44AE9A00BB31FC /* MainTabBarController.swift */,
 			);
 			path = MyBudget;
 			sourceTree = "<group>";
@@ -221,6 +230,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				354707931A449C9E00BB31FC /* CoreDataStack.swift in Sources */,
+				354707911A4499E400BB31FC /* AddSpendingViewController.swift in Sources */,
+				354707951A44AE9A00BB31FC /* MainTabBarController.swift in Sources */,
 				3547076D1A448C3600BB31FC /* ViewController.swift in Sources */,
 				3547076B1A448C3600BB31FC /* MyBudget.xcdatamodeld in Sources */,
 				3547078D1A448EB400BB31FC /* SpendingsViewController.swift in Sources */,
