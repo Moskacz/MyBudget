@@ -20,7 +20,6 @@ class CoreDataStack {
 		let modelURL = NSBundle.mainBundle().URLForResource("MyBudget", withExtension: "momd")!
 		model = NSManagedObjectModel(contentsOfURL: modelURL)!
 		coordinator = NSPersistentStoreCoordinator(managedObjectModel: self.model)
-
 		context = NSManagedObjectContext(concurrencyType: .MainQueueConcurrencyType)
 		context.persistentStoreCoordinator = coordinator
 		
@@ -32,6 +31,8 @@ class CoreDataStack {
 			println("NSPersistentStore initialization error: \(error?.description)")
 			abort()
 		}
+		
+		addDumbDataIfNeeded()
 	}
 	
 	func applicationDocumentsDirectory() -> NSURL {
@@ -43,6 +44,19 @@ class CoreDataStack {
 		var error: NSError? = nil
 		if self.context.hasChanges && !self.context.save(&error) {
 			println("Saving context error \(error!.localizedDescription), \(error!.userInfo)")
+		}
+	}
+	
+	func addDumbDataIfNeeded() {
+		let fr = NSFetchRequest(entityName: "Spending")
+		var error: NSError? = nil
+		if self.context.countForFetchRequest(fr, error: &error) == 0 {
+			let spendingEntity = NSEntityDescription.entityForName("Spending", inManagedObjectContext: self.context)
+			let spending = Spending(entity: spendingEntity!, insertIntoManagedObjectContext: self.context)
+			spending.name = "test"
+			spending.date = NSDate()
+			spending.value = NSNumber(double: 10.0)
+			self.saveContext()
 		}
 	}
 }

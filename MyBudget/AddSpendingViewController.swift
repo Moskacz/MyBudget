@@ -9,10 +9,10 @@
 import UIKit
 
 class AddSpendingViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+	
+  override func viewDidLoad() {
+    super.viewDidLoad()
+	}
 
 	@IBAction func addSpendingTapped(sender: UIButton) {
 		dismissViewControllerAnimated(true, completion: nil)
