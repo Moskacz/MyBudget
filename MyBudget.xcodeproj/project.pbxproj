@@ -15,6 +15,7 @@
 		354707751A448C3600BB31FC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 354707731A448C3600BB31FC /* LaunchScreen.xib */; };
 		354707811A448C3600BB31FC /* MyBudgetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354707801A448C3600BB31FC /* MyBudgetTests.swift */; };
 		3547078D1A448EB400BB31FC /* SpendingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3547078C1A448EB400BB31FC /* SpendingsViewController.swift */; };
+		3547078F1A4497E300BB31FC /* Spending.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3547078E1A4497E300BB31FC /* Spending.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		3547077F1A448C3600BB31FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		354707801A448C3600BB31FC /* MyBudgetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBudgetTests.swift; sourceTree = "<group>"; };
 		3547078C1A448EB400BB31FC /* SpendingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpendingsViewController.swift; sourceTree = "<group>"; };
+		3547078E1A4497E300BB31FC /* Spending.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spending.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				354707711A448C3600BB31FC /* Images.xcassets */,
 				354707731A448C3600BB31FC /* LaunchScreen.xib */,
 				354707691A448C3600BB31FC /* MyBudget.xcdatamodeld */,
+				3547078E1A4497E300BB31FC /* Spending.swift */,
 				354707651A448C3600BB31FC /* Supporting Files */,
 				3547078C1A448EB400BB31FC /* SpendingsViewController.swift */,
 			);
@@ -222,6 +225,7 @@
 				3547076B1A448C3600BB31FC /* MyBudget.xcdatamodeld in Sources */,
 				3547078D1A448EB400BB31FC /* SpendingsViewController.swift in Sources */,
 				354707681A448C3600BB31FC /* AppDelegate.swift in Sources */,
+				3547078F1A4497E300BB31FC /* Spending.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
