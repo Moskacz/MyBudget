@@ -9,9 +9,14 @@
 import Foundation
 import CoreData
 
+protocol SpendingsDataManagerDelegate {
+	func dataHasChanged()
+}
+
 class SpendingsDataManager {
 	private let coreDataStack: CoreDataStack
 	var dailySpendings: [Spending]?
+	var delegate: SpendingsDataManagerDelegate?
 	
 	init() {
 		self.coreDataStack = CoreDataStack()
@@ -31,6 +36,10 @@ class SpendingsDataManager {
 		spending.date = spendingDTO.date
 		spending.name = "test 2"
 		self.coreDataStack.saveContext()
+		
+		if let delegate = self.delegate {
+			delegate.dataHasChanged()
+		}
 	}
 	
 }

@@ -8,13 +8,14 @@
 
 import UIKit
 
-class SpendingsViewController: UIViewController, UITableViewDataSource {
+class SpendingsViewController: UIViewController, UITableViewDataSource, SpendingsDataManagerDelegate {
 	@IBOutlet weak var tableView: UITableView!
 	let dataManager: SpendingsDataManager!
 
 	required init(coder aDecoder: NSCoder) {
 		dataManager = SpendingsDataManager()
 		super.init(coder: aDecoder)
+		dataManager.delegate = self
 	}
 	
   override func viewDidLoad() {
@@ -43,6 +44,13 @@ class SpendingsViewController: UIViewController, UITableViewDataSource {
 			let destinationVC = segue.destinationViewController as AddSpendingViewController
 			destinationVC.dataManager = dataManager
 		}
+	}
+	
+	// MARK: SpendingsDataManagerDelegate
+	
+	func dataHasChanged() {
+		dataManager.fetchDailySpendings()
+		self.tableView.reloadData()
 	}
 	
 }
