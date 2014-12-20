@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6249" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GdV-EU-lQk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6724" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GdV-EU-lQk">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6243"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
     </dependencies>
     <scenes>
         <!--Charts-->
@@ -134,7 +134,7 @@
                     <navigationItem key="navigationItem" id="v9d-go-xqH">
                         <barButtonItem key="rightBarButtonItem" title="Add" id="oOg-3I-co3">
                             <connections>
-                                <segue destination="lzi-Ma-zSF" kind="presentation" id="mGj-bL-uOY"/>
+                                <segue destination="lzi-Ma-zSF" kind="presentation" identifier="showAddSpendingVC" id="mGj-bL-uOY"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -157,8 +157,55 @@
                     <view key="view" contentMode="scaleToFill" id="2Rd-XU-v7R">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="sES-5k-bCD">
+                                <rect key="frame" x="0.0" y="20" width="600" height="162"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="162" id="Bv5-oP-G8H"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="440777107.01277202">
+                                    <!--2014-12-20 14:05:07 +0000-->
+                                </date>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f4e-CT-89O">
+                                <rect key="frame" x="10" y="202" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3PZ-xF-kcF">
+                                <rect key="frame" x="62" y="198" width="528" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hDH-jQ-AlI">
+                                <rect key="frame" x="285" y="248" width="30" height="30"/>
+                                <state key="normal" title="Add">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addButtonTapped:" destination="lzi-Ma-zSF" eventType="touchUpInside" id="Eti-DJ-e1w"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="hDH-jQ-AlI" secondAttribute="centerX" id="1xi-aV-pCh"/>
+                            <constraint firstAttribute="trailing" secondItem="sES-5k-bCD" secondAttribute="trailing" id="4xv-b6-R0f"/>
+                            <constraint firstItem="f4e-CT-89O" firstAttribute="centerY" secondItem="3PZ-xF-kcF" secondAttribute="centerY" constant="-0.5" id="5Py-wE-3ix"/>
+                            <constraint firstItem="f4e-CT-89O" firstAttribute="top" secondItem="sES-5k-bCD" secondAttribute="bottom" constant="20" id="7Lx-0q-eUy"/>
+                            <constraint firstItem="hDH-jQ-AlI" firstAttribute="top" secondItem="3PZ-xF-kcF" secondAttribute="bottom" constant="20" id="83d-kp-N6z"/>
+                            <constraint firstItem="f4e-CT-89O" firstAttribute="leading" secondItem="2Rd-XU-v7R" secondAttribute="leading" constant="10" id="B97-uO-2Mg"/>
+                            <constraint firstAttribute="trailing" secondItem="3PZ-xF-kcF" secondAttribute="trailing" constant="10" id="GTY-RA-CyH"/>
+                            <constraint firstItem="sES-5k-bCD" firstAttribute="leading" secondItem="2Rd-XU-v7R" secondAttribute="leading" id="Zge-gr-aLZ"/>
+                            <constraint firstItem="sES-5k-bCD" firstAttribute="top" secondItem="J2C-ei-jaL" secondAttribute="bottom" id="ifz-ga-9fd"/>
+                            <constraint firstItem="3PZ-xF-kcF" firstAttribute="leading" secondItem="f4e-CT-89O" secondAttribute="trailing" constant="10" id="yJk-wv-RYA"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="datePicker" destination="sES-5k-bCD" id="mOc-7Q-f36"/>
+                        <outlet property="value" destination="3PZ-xF-kcF" id="uCx-r6-VEy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bTw-Qz-Pnj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

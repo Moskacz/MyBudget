@@ -15,6 +15,7 @@
 		354707751A448C3600BB31FC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 354707731A448C3600BB31FC /* LaunchScreen.xib */; };
 		354707811A448C3600BB31FC /* MyBudgetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354707801A448C3600BB31FC /* MyBudgetTests.swift */; };
 		354707951A44AE9A00BB31FC /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354707941A44AE9A00BB31FC /* MainTabBarController.swift */; };
+		357656221A45BD3200D1E4D7 /* SpendingDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357656211A45BD3200D1E4D7 /* SpendingDTO.swift */; };
 		35A60B521A44DF6700C1AAB4 /* AddSpendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A60B501A44DF6700C1AAB4 /* AddSpendingViewController.swift */; };
 		35A60B531A44DF6700C1AAB4 /* SpendingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A60B511A44DF6700C1AAB4 /* SpendingsViewController.swift */; };
 		35A60B5A1A44DF7100C1AAB4 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A60B551A44DF7100C1AAB4 /* CoreDataStack.swift */; };
@@ -47,6 +48,7 @@
 		3547077F1A448C3600BB31FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		354707801A448C3600BB31FC /* MyBudgetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBudgetTests.swift; sourceTree = "<group>"; };
 		354707941A44AE9A00BB31FC /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		357656211A45BD3200D1E4D7 /* SpendingDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpendingDTO.swift; sourceTree = "<group>"; };
 		35A60B501A44DF6700C1AAB4 /* AddSpendingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSpendingViewController.swift; sourceTree = "<group>"; };
 		35A60B511A44DF6700C1AAB4 /* SpendingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpendingsViewController.swift; sourceTree = "<group>"; };
 		35A60B551A44DF7100C1AAB4 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				35A60B581A44DF7100C1AAB4 /* Spending.swift */,
 				35A60B591A44DF7100C1AAB4 /* SpendingsDataManager.swift */,
 				35A60B5E1A44E13A00C1AAB4 /* DailySpendingTableViewCell.swift */,
+				357656211A45BD3200D1E4D7 /* SpendingDTO.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				35A60B531A44DF6700C1AAB4 /* SpendingsViewController.swift in Sources */,
 				35A60B5F1A44E13A00C1AAB4 /* DailySpendingTableViewCell.swift in Sources */,
 				35A60B5A1A44DF7100C1AAB4 /* CoreDataStack.swift in Sources */,
+				357656221A45BD3200D1E4D7 /* SpendingDTO.swift in Sources */,
 				35A60B521A44DF6700C1AAB4 /* AddSpendingViewController.swift in Sources */,
 				354707681A448C3600BB31FC /* AppDelegate.swift in Sources */,
 				35A60B5B1A44DF7100C1AAB4 /* MyBudget.xcdatamodeld in Sources */,

@@ -23,5 +23,14 @@ class SpendingsDataManager {
 		var fetchError: NSError? = nil
 		self.dailySpendings = self.coreDataStack.context.executeFetchRequest(fetchRequest, error: &fetchError) as [Spending]?		
 	}
+
+	func saveSpendingWithDTO(spendingDTO: SpendingDTO) {
+		let entityDescription = NSEntityDescription.entityForName("Spending", inManagedObjectContext: self.coreDataStack.context)
+		let spending = Spending(entity: entityDescription!, insertIntoManagedObjectContext: self.coreDataStack.context)
+		spending.value = spendingDTO.value
+		spending.date = spendingDTO.date
+		spending.name = "test 2"
+		self.coreDataStack.saveContext()
+	}
 	
 }

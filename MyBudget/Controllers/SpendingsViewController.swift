@@ -32,8 +32,17 @@ class SpendingsViewController: UIViewController, UITableViewDataSource {
 	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 		var cell = tableView.dequeueReusableCellWithIdentifier("SpendingsCell") as DailySpendingTableViewCell
 		let spending = self.dataManager.dailySpendings![indexPath.row]
-		cell.date.text = "test"
+		cell.date.text = spending.name
 		return cell
+	}
+	
+	// MARK: segues
+	
+	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+		if segue.identifier == "showAddSpendingVC" {
+			let destinationVC = segue.destinationViewController as AddSpendingViewController
+			destinationVC.dataManager = dataManager
+		}
 	}
 	
 }
