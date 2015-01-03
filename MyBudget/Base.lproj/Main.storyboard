@@ -170,6 +170,15 @@
                                     <action selector="addButtonTapped:" destination="lzi-Ma-zSF" eventType="touchUpInside" id="Eti-DJ-e1w"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L2V-HF-fD7">
+                                <rect key="frame" x="273" y="550" width="54" height="30"/>
+                                <state key="normal" title="Dismiss">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="dismissButtonTapped:" destination="lzi-Ma-zSF" eventType="touchUpInside" id="eUl-mK-GXQ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -179,13 +188,16 @@
                             <constraint firstItem="f4e-CT-89O" firstAttribute="top" secondItem="sES-5k-bCD" secondAttribute="bottom" constant="20" id="7Lx-0q-eUy"/>
                             <constraint firstItem="hDH-jQ-AlI" firstAttribute="top" secondItem="3PZ-xF-kcF" secondAttribute="bottom" constant="20" id="83d-kp-N6z"/>
                             <constraint firstItem="f4e-CT-89O" firstAttribute="leading" secondItem="2Rd-XU-v7R" secondAttribute="leading" constant="10" id="B97-uO-2Mg"/>
+                            <constraint firstAttribute="centerX" secondItem="L2V-HF-fD7" secondAttribute="centerX" id="Byn-IN-PcR"/>
                             <constraint firstAttribute="trailing" secondItem="3PZ-xF-kcF" secondAttribute="trailing" constant="10" id="GTY-RA-CyH"/>
+                            <constraint firstItem="vdH-UC-RgJ" firstAttribute="top" secondItem="L2V-HF-fD7" secondAttribute="bottom" constant="20" id="TgU-nk-PfR"/>
                             <constraint firstItem="sES-5k-bCD" firstAttribute="leading" secondItem="2Rd-XU-v7R" secondAttribute="leading" id="Zge-gr-aLZ"/>
                             <constraint firstItem="sES-5k-bCD" firstAttribute="top" secondItem="J2C-ei-jaL" secondAttribute="bottom" id="ifz-ga-9fd"/>
                             <constraint firstItem="3PZ-xF-kcF" firstAttribute="leading" secondItem="f4e-CT-89O" secondAttribute="trailing" constant="10" id="yJk-wv-RYA"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addSpendingButton" destination="hDH-jQ-AlI" id="GAO-WQ-jDq"/>
                         <outlet property="datePicker" destination="sES-5k-bCD" id="mOc-7Q-f36"/>
                         <outlet property="value" destination="3PZ-xF-kcF" id="uCx-r6-VEy"/>
                     </connections>
