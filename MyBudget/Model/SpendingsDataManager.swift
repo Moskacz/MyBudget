@@ -36,6 +36,7 @@ class SpendingsDataManager {
 		fetchRequest.propertiesToFetch = [expressionDescription, "stringDateDescription"]
 		fetchRequest.propertiesToGroupBy = ["stringDateDescription"]
 		fetchRequest.resultType = NSFetchRequestResultType.DictionaryResultType
+		fetchRequest.sortDescriptors = [NSSortDescriptor(key: "stringDateDescription", ascending: false)]
 		
 		let asyncFetchRequest = NSAsynchronousFetchRequest(fetchRequest: fetchRequest) { [unowned self] (result: NSAsynchronousFetchResult!) -> Void in
 			if let dailySpendings = result.finalResult as? [Dictionary<String, AnyObject>] {
