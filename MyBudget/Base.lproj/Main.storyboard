@@ -63,61 +63,44 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KPz-kU-7E8" id="GFd-Mi-0Yi">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+Value" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vle-MS-0iO">
-                                                    <rect key="frame" x="542" y="5" width="48" height="49"/>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ACC-bD-3LW">
                                                     <rect key="frame" x="10" y="5" width="33" height="49"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IB9-14-Iit">
-                                                    <rect key="frame" x="482" y="5" width="50" height="49"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cys-iK-UIj">
+                                                    <rect key="frame" x="440" y="5" width="150" height="49"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="50" id="CGM-6U-eyk"/>
+                                                        <constraint firstAttribute="width" constant="150" id="liU-R3-TuB"/>
                                                     </constraints>
-                                                </imageView>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z8g-fd-RJi">
-                                                    <rect key="frame" x="368" y="5" width="50" height="49"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="50" id="DXl-z2-d97"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-Value" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BoY-YK-DtZ">
-                                                    <rect key="frame" x="428" y="5" width="44" height="49"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="z3F-qA-wr4">
+                                                    <rect key="frame" x="380" y="5" width="50" height="49"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="50" id="6fq-hH-vNI"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="IB9-14-Iit" secondAttribute="bottom" constant="5" id="2U1-td-ATF"/>
-                                                <constraint firstAttribute="bottom" secondItem="BoY-YK-DtZ" secondAttribute="bottom" constant="5" id="3wJ-uS-9Ne"/>
-                                                <constraint firstItem="BoY-YK-DtZ" firstAttribute="top" secondItem="GFd-Mi-0Yi" secondAttribute="top" constant="5" id="7rR-gX-s8d"/>
-                                                <constraint firstAttribute="bottom" secondItem="vle-MS-0iO" secondAttribute="bottom" constant="5" id="NgD-u3-2JR"/>
-                                                <constraint firstAttribute="trailing" secondItem="vle-MS-0iO" secondAttribute="trailing" constant="10" id="Q3q-tv-RFg"/>
-                                                <constraint firstItem="vle-MS-0iO" firstAttribute="top" secondItem="GFd-Mi-0Yi" secondAttribute="top" constant="5" id="QfS-Gt-bso"/>
-                                                <constraint firstAttribute="bottom" secondItem="z8g-fd-RJi" secondAttribute="bottom" constant="5" id="RCM-RI-oPz"/>
-                                                <constraint firstItem="IB9-14-Iit" firstAttribute="top" secondItem="GFd-Mi-0Yi" secondAttribute="top" constant="5" id="SK2-C3-P3k"/>
-                                                <constraint firstItem="z8g-fd-RJi" firstAttribute="top" secondItem="GFd-Mi-0Yi" secondAttribute="top" constant="5" id="dV1-KX-SVM"/>
+                                                <constraint firstItem="z3F-qA-wr4" firstAttribute="top" secondItem="GFd-Mi-0Yi" secondAttribute="top" constant="5" id="RsW-wl-XWz"/>
+                                                <constraint firstItem="Cys-iK-UIj" firstAttribute="top" secondItem="GFd-Mi-0Yi" secondAttribute="top" constant="5" id="Ypj-Zg-S9g"/>
                                                 <constraint firstItem="ACC-bD-3LW" firstAttribute="leading" secondItem="GFd-Mi-0Yi" secondAttribute="leading" constant="10" id="emE-ia-P95"/>
-                                                <constraint firstItem="IB9-14-Iit" firstAttribute="leading" secondItem="BoY-YK-DtZ" secondAttribute="trailing" constant="10" id="gMx-st-1Hx"/>
-                                                <constraint firstItem="vle-MS-0iO" firstAttribute="leading" secondItem="IB9-14-Iit" secondAttribute="trailing" constant="10" id="n99-yo-8pS"/>
+                                                <constraint firstAttribute="trailing" secondItem="Cys-iK-UIj" secondAttribute="trailing" constant="10" id="fkD-X9-4sh"/>
+                                                <constraint firstAttribute="bottom" secondItem="Cys-iK-UIj" secondAttribute="bottom" constant="5" id="ncS-Po-XCw"/>
+                                                <constraint firstItem="Cys-iK-UIj" firstAttribute="leading" secondItem="z3F-qA-wr4" secondAttribute="trailing" constant="10" id="osN-QG-N3k"/>
+                                                <constraint firstAttribute="bottom" secondItem="z3F-qA-wr4" secondAttribute="bottom" constant="5" id="q0V-dg-bpc"/>
                                                 <constraint firstAttribute="bottom" secondItem="ACC-bD-3LW" secondAttribute="bottom" constant="5" id="tKd-MB-IJc"/>
                                                 <constraint firstItem="ACC-bD-3LW" firstAttribute="top" secondItem="GFd-Mi-0Yi" secondAttribute="top" constant="5" id="yfC-h9-tXd"/>
-                                                <constraint firstItem="BoY-YK-DtZ" firstAttribute="leading" secondItem="z8g-fd-RJi" secondAttribute="trailing" constant="10" id="zgZ-Iy-UEf"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="date" destination="ACC-bD-3LW" id="qLh-6O-zSv"/>
-                                            <outlet property="negativeValue" destination="BoY-YK-DtZ" id="Ijg-J9-65l"/>
-                                            <outlet property="negativeValueIcon" destination="z8g-fd-RJi" id="Cpt-uX-v9S"/>
-                                            <outlet property="positiveValue" destination="vle-MS-0iO" id="EJR-lB-7Vc"/>
-                                            <outlet property="positiveValueIcon" destination="IB9-14-Iit" id="nA7-l9-eOn"/>
+                                            <outlet property="icon" destination="z3F-qA-wr4" id="hr1-bl-5CN"/>
+                                            <outlet property="value" destination="Cys-iK-UIj" id="p3q-2n-ihS"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -144,7 +127,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="khx-ha-Get" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1763" y="26"/>
+            <point key="canvasLocation" x="1763" y="25"/>
         </scene>
         <!--Add Spending View Controller-->
         <scene sceneID="BcM-KA-rqp">

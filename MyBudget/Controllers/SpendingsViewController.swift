@@ -33,8 +33,8 @@ class SpendingsViewController: UIViewController, UITableViewDataSource, Spending
 	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 		var cell = tableView.dequeueReusableCellWithIdentifier("SpendingsCell") as DailySpendingTableViewCell
 		let dailySpending = self.dataManager.dailySpendings![indexPath.row]
+		cell.setValue(dailySpending.value)
 		cell.date.text = dailySpending.dateLiteral
-		cell.positiveValue.text = dailySpending.value.stringValue
 		return cell
 	}
 	

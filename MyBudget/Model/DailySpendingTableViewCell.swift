@@ -11,9 +11,12 @@ import UIKit
 class DailySpendingTableViewCell: UITableViewCell {
 	
 	@IBOutlet weak var date: UILabel!
-	@IBOutlet weak var positiveValue: UILabel!
-	@IBOutlet weak var negativeValue: UILabel!
-	@IBOutlet weak var positiveValueIcon: UIImageView!
-	@IBOutlet weak var negativeValueIcon: UIImageView!
+	@IBOutlet weak var value: UILabel!
+	@IBOutlet weak var icon: UIImageView!
+	
+	func setValue(value: NSNumber) {
+		self.value.text = value.stringValue
+		self.backgroundColor = value.floatValue > 0 ? UIColor.greenColor() : UIColor.redColor()
+	}
 	
 }
