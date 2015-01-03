@@ -16,7 +16,7 @@ class DailySpendingTableViewCell: UITableViewCell {
 	
 	func setValue(value: NSNumber) {
 		self.value.text = value.stringValue
-		self.backgroundColor = value.floatValue > 0 ? UIColor.greenColor() : UIColor.redColor()
+		self.backgroundColor = value.floatValue > 0 ? Constants.Colors.CellGreenColor : Constants.Colors.CellRedColor
 	}
 	
 }
