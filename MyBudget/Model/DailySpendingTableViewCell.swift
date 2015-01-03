@@ -19,4 +19,8 @@ class DailySpendingTableViewCell: UITableViewCell {
 		self.backgroundColor = value.floatValue > 0 ? Constants.Colors.CellGreenColor : Constants.Colors.CellRedColor
 	}	
 	
+	func setDateLiteral(literal: String) {
+		self.date.text = NSDate.isDateToday(literal) ? "Today" : literal		
+	}
+	
 }

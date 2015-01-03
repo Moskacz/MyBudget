@@ -25,6 +25,7 @@
 		35D0EC761A5878E200442FE6 /* Spending.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D0EC751A5878E200442FE6 /* Spending.swift */; };
 		35D0EC781A587A9B00442FE6 /* DailySpending.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D0EC771A587A9B00442FE6 /* DailySpending.swift */; };
 		35D0EC7E1A58ABA100442FE6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D0EC7D1A58ABA100442FE6 /* Constants.swift */; };
+		35D0EC801A58B14400442FE6 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D0EC7F1A58B14400442FE6 /* DateExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		35D0EC751A5878E200442FE6 /* Spending.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spending.swift; sourceTree = "<group>"; };
 		35D0EC771A587A9B00442FE6 /* DailySpending.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailySpending.swift; sourceTree = "<group>"; };
 		35D0EC7D1A58ABA100442FE6 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		35D0EC7F1A58B14400442FE6 /* DateExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
 		9DE804FADEDC4B0FBC4D8239 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		D64CA49CE94147EF8A51B2FA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -88,6 +90,7 @@
 			children = (
 				351C30581A5837660029B271 /* DateFormatter.swift */,
 				35D0EC7D1A58ABA100442FE6 /* Constants.swift */,
+				35D0EC7F1A58B14400442FE6 /* DateExtensions.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				35A60B5F1A44E13A00C1AAB4 /* DailySpendingTableViewCell.swift in Sources */,
 				35D0EC741A58789600442FE6 /* MyBudget.xcdatamodeld in Sources */,
 				35A60B5A1A44DF7100C1AAB4 /* CoreDataStack.swift in Sources */,
+				35D0EC801A58B14400442FE6 /* DateExtensions.swift in Sources */,
 				35D0EC7E1A58ABA100442FE6 /* Constants.swift in Sources */,
 				357656221A45BD3200D1E4D7 /* SpendingDTO.swift in Sources */,
 				35A60B521A44DF6700C1AAB4 /* AddSpendingViewController.swift in Sources */,
