@@ -22,7 +22,7 @@ class AddSpendingViewController: UIViewController {
 		if value.text.utf16Count != 0 {
 			let value = (self.value.text as NSString).floatValue
 			let spendingDTO = SpendingDTO(date: self.datePicker.date, value: NSNumber(float: value))
-			self.dataManager.saveSpendingWithDTO(spendingDTO)
+			self.dataManager.saveSpending(spendingDTO)
 		}
 		
 		dismissViewControllerAnimated(true, completion: nil)

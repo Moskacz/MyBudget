@@ -28,11 +28,8 @@ class CoreDataStack {
 		store = coordinator.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: storeURL, options: nil, error: &error)
 		
 		if store == nil {
-			println("NSPersistentStore initialization error: \(error?.description)")
-			abort()
+			println("NSPersistentStore initialization error: \(error?.description)")			
 		}
-		
-		addDumbDataIfNeeded()
 	}
 	
 	func applicationDocumentsDirectory() -> NSURL {
@@ -47,16 +44,4 @@ class CoreDataStack {
 		}
 	}
 	
-	func addDumbDataIfNeeded() {
-		let fr = NSFetchRequest(entityName: "Spending")
-		var error: NSError? = nil
-		if self.context.countForFetchRequest(fr, error: &error) == 0 {
-			let spendingEntity = NSEntityDescription.entityForName("Spending", inManagedObjectContext: self.context)
-			let spending = Spending(entity: spendingEntity!, insertIntoManagedObjectContext: self.context)
-			spending.name = "test"
-			spending.date = NSDate()
-			spending.value = NSNumber(double: 10.0)
-			self.saveContext()
-		}
-	}
 }

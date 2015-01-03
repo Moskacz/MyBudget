@@ -12,6 +12,12 @@ class SpendingDTO {
 	let date: NSDate
 	let value: NSNumber
 	
+	var stringDateDescription: String {
+		let dateFormatter = NSDateFormatter()
+		dateFormatter.dateFormat = "dd/MM/yyyy"
+		return dateFormatter.stringFromDate(self.date)
+	}
+	
 	init(date: NSDate, value: NSNumber) {
 		self.date = date
 		self.value = value

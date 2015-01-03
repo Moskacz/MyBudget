@@ -20,7 +20,7 @@ class SpendingsViewController: UIViewController, UITableViewDataSource, Spending
 	
   override func viewDidLoad() {
     super.viewDidLoad()
-		self.tableView.dataSource = self		
+		self.tableView.dataSource = self
   }
 	
 	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -32,8 +32,9 @@ class SpendingsViewController: UIViewController, UITableViewDataSource, Spending
 	
 	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 		var cell = tableView.dequeueReusableCellWithIdentifier("SpendingsCell") as DailySpendingTableViewCell
-		let spending = self.dataManager.dailySpendings![indexPath.row]
-		cell.date.text = spending.name
+		let dailySpending = self.dataManager.dailySpendings![indexPath.row]
+		cell.date.text = dailySpending.dateLiteral
+		cell.positiveValue.text = dailySpending.value.stringValue
 		return cell
 	}
 	
@@ -48,9 +49,7 @@ class SpendingsViewController: UIViewController, UITableViewDataSource, Spending
 	
 	// MARK: SpendingsDataManagerDelegate
 	
-	func dataHasChanged() {
-		dataManager.fetchDailySpendings()
+	func dataManagerDidFetchDailySpendings() {
 		self.tableView.reloadData()
 	}
-	
 }
