@@ -30,7 +30,7 @@ class SpendingsDataManager {
 					return DailySpending(dateLiteral: date, value: NSNumber(float: value))
 				})
 			}
-			NSNotificationCenter.defaultCenter().postNotificationName("aaa", object: nil)
+			NSNotificationCenter.defaultCenter().postNotificationName(Constants.NotificationNames.ReloadData, object: nil)
 		}
 		
 		var fetchError: NSError? = nil
@@ -44,7 +44,7 @@ class SpendingsDataManager {
 		
 		let asyncFetchRequest = NSAsynchronousFetchRequest(fetchRequest: fetchRequest) { [unowned self] (result: NSAsynchronousFetchResult!) -> Void in
 			self.fetchedSpendings = result.finalResult as? [Spending]
-			NSNotificationCenter.defaultCenter().postNotificationName("aaa", object: nil)
+			NSNotificationCenter.defaultCenter().postNotificationName(Constants.NotificationNames.ReloadData, object: nil)
 		}
 		
 		var error: NSError?

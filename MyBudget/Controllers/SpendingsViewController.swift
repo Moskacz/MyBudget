@@ -17,7 +17,7 @@ class SpendingsViewController: UIViewController, UITableViewDataSource {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		self.tableView.dataSource = self
-		NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("reloadData"), name: "aaa", object: nil)
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("reloadData"), name: Constants.NotificationNames.ReloadData, object: nil)
 		self.dataManager?.fetchSpendingsForDay(self.date!)
 	}
 

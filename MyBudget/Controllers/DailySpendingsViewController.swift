@@ -16,7 +16,7 @@ class DailySpendingsViewController: UIViewController, UITableViewDataSource, UIT
 
 	required init(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
-		NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("reloadData"), name: "aaa", object: nil)
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("reloadData"), name: Constants.NotificationNames.ReloadData, object: nil)
 	}
 	
   override func viewDidLoad() {

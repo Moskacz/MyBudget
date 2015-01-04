@@ -19,4 +19,8 @@ struct Constants {
 		static let SecondsInDay: NSTimeInterval = 60 * 60 * 24
 	}
 	
+	struct NotificationNames {
+		static let ReloadData = "reloadDataNotification"
+	}
+	
 }
