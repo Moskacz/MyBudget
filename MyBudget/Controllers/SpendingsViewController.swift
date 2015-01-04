@@ -11,24 +11,28 @@ import UIKit
 class SpendingsViewController: UIViewController, UITableViewDataSource {
 	
 	@IBOutlet weak var tableView: UITableView!
-	var dataManager: SpendingsDataManager!
+	let dataManager = SpendingsDataManager()
+	var spendings: [Spending]?
 	var date: NSDate?
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		self.tableView.dataSource = self
-		NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("reloadData"), name: Constants.NotificationNames.ReloadData, object: nil)
-		self.dataManager?.fetchSpendingsForDay(self.date!)
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("fetchData"), name: Constants.NotificationNames.ReloadData, object: nil)
+		fetchData()
 	}
 
-	dynamic func reloadData() {
-		self.tableView.reloadData()
+	dynamic func fetchData() {
+		self.dataManager.fetchSpendingsForDay(self.date!, completion: { (spendings) -> () in
+			self.spendings = spendings
+			self.tableView.reloadData()
+		})
 	}
 	
 	// MARK: UITableViewDataSource
 	
 	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		if let spendings = self.dataManager.fetchedSpendings {
+		if let spendings = self.spendings {
 			return spendings.count
 		}
 		return 0
@@ -36,7 +40,7 @@ class SpendingsViewController: UIViewController, UITableViewDataSource {
 	
 	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCellWithIdentifier("SpendingCell") as UITableViewCell
-		let spending = self.dataManager.fetchedSpendings![indexPath.row]
+		let spending = self.spendings![indexPath.row]
 		cell.textLabel?.text = spending.date.description
 		return cell
 	}

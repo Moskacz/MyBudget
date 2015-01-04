@@ -13,31 +13,33 @@ class DailySpendingsViewController: UIViewController, UITableViewDataSource, UIT
 	let dataManager = SpendingsDataManager()
 	let dateFormatter = DateFormatter()
 	var selectedDate: NSDate?
+	var dailySpendings: [DailySpending]?
 
 	required init(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
-		NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("reloadData"), name: Constants.NotificationNames.ReloadData, object: nil)
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("fetchData"), name: Constants.NotificationNames.ReloadData, object: nil)
 	}
 	
   override func viewDidLoad() {
     super.viewDidLoad()
 		self.tableView.dataSource = self
 		self.tableView.delegate = self
-		self.dataManager.fetchDailySpendings()
+		fetchData()		
   }
 	
 	// MARK: UITableViewDataSource
 	
 	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		if self.dataManager.dailySpendings != nil {
-			return self.dataManager.dailySpendings!.count
+		if let spendings = self.dailySpendings {
+			return spendings.count
 		}
+		
 		return 0;
 	}
 	
 	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
 		var cell = tableView.dequeueReusableCellWithIdentifier("DailySpendingsCell") as DailySpendingTableViewCell
-		let dailySpending = self.dataManager.dailySpendings![indexPath.row]
+		let dailySpending = self.dailySpendings![indexPath.row]
 		cell.setValue(dailySpending.value)
 		cell.setDateLiteral(dailySpending.dateLiteral)
 		return cell
@@ -46,7 +48,7 @@ class DailySpendingsViewController: UIViewController, UITableViewDataSource, UIT
 	// MARK: UITableViewDelegate
 	
 	func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-		let dailySpending = self.dataManager.dailySpendings![indexPath.row]
+		let dailySpending = self.dailySpendings![indexPath.row]
 		self.selectedDate = self.dateFormatter.dateFromString(dailySpending.dateLiteral)
 		performSegueWithIdentifier("showSpendings", sender: nil)
 	}
@@ -54,17 +56,16 @@ class DailySpendingsViewController: UIViewController, UITableViewDataSource, UIT
 	// MARK: segues
 	
 	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-		if segue.identifier == "showAddSpendingVC" {
-			let destinationVC = segue.destinationViewController as AddSpendingViewController
-			destinationVC.dataManager = dataManager
-		} else if segue.identifier == "showSpendings" {
-			let destinationVC = segue.destinationViewController as SpendingsViewController
-			destinationVC.dataManager = dataManager
+		if segue.identifier == "showSpendings" {
+			let destinationVC = segue.destinationViewController as SpendingsViewController			
 			destinationVC.date = self.selectedDate
 		}
 	}
 	
-	dynamic func reloadData() {
-		self.tableView.reloadData()
+	dynamic func fetchData() {
+		self.dataManager.fetchDailySpendings { (dailySpendings) -> () in
+			self.dailySpendings = dailySpendings
+			self.tableView.reloadData()
+		}
 	}
 }

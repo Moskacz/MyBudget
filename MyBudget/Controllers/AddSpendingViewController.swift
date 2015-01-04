@@ -13,7 +13,7 @@ class AddSpendingViewController: UIViewController {
 	@IBOutlet weak var addSpendingButton: UIButton!
 	@IBOutlet weak var datePicker: UIDatePicker!
 	@IBOutlet weak var value: UITextField!
-	var dataManager: SpendingsDataManager!
+	let dataManager = SpendingsDataManager()
 	
   override func viewDidLoad() {
     super.viewDidLoad()

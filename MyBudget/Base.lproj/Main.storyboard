@@ -27,7 +27,7 @@
         <!--Spendings-->
         <scene sceneID="5ZM-Og-Hc0">
             <objects>
-                <navigationController id="LXm-E3-GM5" sceneMemberID="viewController">
+                <navigationController id="LXm-E3-GM5" customClass="NavigationController" customModule="MyBudget" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Spendings" id="aq7-XG-35l"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="IgX-dX-xgU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -114,13 +114,7 @@
                             <constraint firstAttribute="bottom" secondItem="yda-fH-voW" secondAttribute="bottom" id="wJK-lt-RUH"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="v9d-go-xqH">
-                        <barButtonItem key="rightBarButtonItem" title="Add" id="oOg-3I-co3">
-                            <connections>
-                                <segue destination="lzi-Ma-zSF" kind="presentation" identifier="showAddSpendingVC" id="mGj-bL-uOY"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="v9d-go-xqH"/>
                     <connections>
                         <outlet property="tableView" destination="yda-fH-voW" id="rAH-NF-wqd"/>
                         <segue destination="NU9-jj-sUc" kind="show" identifier="showSpendings" id="FZR-8O-GSR"/>
@@ -128,7 +122,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="khx-ha-Get" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1763" y="25"/>
+            <point key="canvasLocation" x="1829" y="-457"/>
         </scene>
         <!--Spendings View Controller-->
         <scene sceneID="xSw-cS-wGo">
@@ -169,12 +163,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M54-tc-ct7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2758" y="-353"/>
+            <point key="canvasLocation" x="2626" y="-457"/>
         </scene>
         <!--Add Spending View Controller-->
         <scene sceneID="BcM-KA-rqp">
             <objects>
-                <viewController id="lzi-Ma-zSF" customClass="AddSpendingViewController" customModule="MyBudget" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddSpendingViewController" id="lzi-Ma-zSF" customClass="AddSpendingViewController" customModule="MyBudget" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="J2C-ei-jaL"/>
                         <viewControllerLayoutGuide type="bottom" id="vdH-UC-RgJ"/>
@@ -246,7 +240,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bTw-Qz-Pnj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2758" y="397"/>
+            <point key="canvasLocation" x="1829" y="278"/>
         </scene>
         <!--Main Tab Bar Controller-->
         <scene sceneID="nvo-Ky-lfc">
