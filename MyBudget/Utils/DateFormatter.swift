@@ -12,7 +12,8 @@ class DateFormatter: NSDateFormatter {
 	
 	override init() {
 		super.init()
-		self.dateFormat = "dd/MM/yyyy\nhh:mm"		
+		self.dateFormat = "dd/MM/yyyy"
+		self.timeZone = NSTimeZone(name: "GMT")
 	}
 	
 	required init(coder aDecoder: NSCoder) {

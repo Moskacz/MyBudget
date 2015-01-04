@@ -9,34 +9,18 @@
 import Foundation
 import CoreData
 
-protocol SpendingsDataManagerDelegate {
-	func dataManagerDidFetchDailySpendings()
-}
-
 class SpendingsDataManager {
 	private let coreDataStack: CoreDataStack
 	var dailySpendings: [DailySpending]?
-	var delegate: SpendingsDataManagerDelegate?
+	var fetchedSpendings: [Spending]?
 	
 	init() {
 		self.coreDataStack = CoreDataStack()
-		fetchDailySpendings()
 	}
 	
 	func fetchDailySpendings() {
-		let fetchRequest = NSFetchRequest()
-		let entityDescription = NSEntityDescription.entityForName("Spending", inManagedObjectContext: self.coreDataStack.context)
-		fetchRequest.entity = entityDescription
-		
-		let expressionDescription = NSExpressionDescription()
-		expressionDescription.name = "value"
-		expressionDescription.expression = NSExpression(forFunction: "sum:", arguments: [NSExpression(forKeyPath: "value")])
-		expressionDescription.expressionResultType = NSAttributeType.FloatAttributeType
-		
-		fetchRequest.propertiesToFetch = [expressionDescription, "stringDateDescription"]
-		fetchRequest.propertiesToGroupBy = ["stringDateDescription"]
-		fetchRequest.resultType = NSFetchRequestResultType.DictionaryResultType
-		fetchRequest.sortDescriptors = [NSSortDescriptor(key: "stringDateDescription", ascending: false)]
+		let fetchRequest = DailySpendingsFetchRequest(entityName: "Spending")
+		fetchRequest.setup()
 		
 		let asyncFetchRequest = NSAsynchronousFetchRequest(fetchRequest: fetchRequest) { [unowned self] (result: NSAsynchronousFetchResult!) -> Void in
 			if let dailySpendings = result.finalResult as? [Dictionary<String, AnyObject>] {
@@ -46,11 +30,25 @@ class SpendingsDataManager {
 					return DailySpending(dateLiteral: date, value: NSNumber(float: value))
 				})
 			}
-			self.delegate?.dataManagerDidFetchDailySpendings()
+			NSNotificationCenter.defaultCenter().postNotificationName("aaa", object: nil)
 		}
 		
 		var fetchError: NSError? = nil
 		self.coreDataStack.context.executeRequest(asyncFetchRequest, error: &fetchError)
+	}
+	
+	func fetchSpendingsForDay(day: NSDate) {
+		let fetchRequest = NSFetchRequest(entityName: "Spending")
+		let nextDay = day.dateByAddingTimeInterval(Constants.Time.SecondsInDay)
+		fetchRequest.predicate = NSPredicate(format: "(date >= %@ AND date < %@)", day, nextDay)
+		
+		let asyncFetchRequest = NSAsynchronousFetchRequest(fetchRequest: fetchRequest) { [unowned self] (result: NSAsynchronousFetchResult!) -> Void in
+			self.fetchedSpendings = result.finalResult as? [Spending]
+			NSNotificationCenter.defaultCenter().postNotificationName("aaa", object: nil)
+		}
+		
+		var error: NSError?
+		self.coreDataStack.context.executeRequest(asyncFetchRequest, error: &error)
 	}
 
 	func saveSpending(spendingDTO: SpendingDTO) {

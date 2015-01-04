@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		11D689B065424DAFBC08CBD0 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D64CA49CE94147EF8A51B2FA /* libPods.a */; };
+		350152741A596FC4006D9835 /* SpendingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350152731A596FC4006D9835 /* SpendingsViewController.swift */; };
 		351C30591A5837660029B271 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 351C30581A5837660029B271 /* DateFormatter.swift */; };
 		354707681A448C3600BB31FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354707671A448C3600BB31FC /* AppDelegate.swift */; };
 		354707701A448C3600BB31FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3547076E1A448C3600BB31FC /* Main.storyboard */; };
@@ -17,7 +18,7 @@
 		354707951A44AE9A00BB31FC /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 354707941A44AE9A00BB31FC /* MainTabBarController.swift */; };
 		357656221A45BD3200D1E4D7 /* SpendingDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357656211A45BD3200D1E4D7 /* SpendingDTO.swift */; };
 		35A60B521A44DF6700C1AAB4 /* AddSpendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A60B501A44DF6700C1AAB4 /* AddSpendingViewController.swift */; };
-		35A60B531A44DF6700C1AAB4 /* SpendingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A60B511A44DF6700C1AAB4 /* SpendingsViewController.swift */; };
+		35A60B531A44DF6700C1AAB4 /* DailySpendingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A60B511A44DF6700C1AAB4 /* DailySpendingsViewController.swift */; };
 		35A60B5A1A44DF7100C1AAB4 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A60B551A44DF7100C1AAB4 /* CoreDataStack.swift */; };
 		35A60B5D1A44DF7100C1AAB4 /* SpendingsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A60B591A44DF7100C1AAB4 /* SpendingsDataManager.swift */; };
 		35A60B5F1A44E13A00C1AAB4 /* DailySpendingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A60B5E1A44E13A00C1AAB4 /* DailySpendingTableViewCell.swift */; };
@@ -26,6 +27,7 @@
 		35D0EC781A587A9B00442FE6 /* DailySpending.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D0EC771A587A9B00442FE6 /* DailySpending.swift */; };
 		35D0EC7E1A58ABA100442FE6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D0EC7D1A58ABA100442FE6 /* Constants.swift */; };
 		35D0EC801A58B14400442FE6 /* DateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D0EC7F1A58B14400442FE6 /* DateExtensions.swift */; };
+		35D0EC821A58B54E00442FE6 /* DailySpendingsFetchRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D0EC811A58B54E00442FE6 /* DailySpendingsFetchRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		350152731A596FC4006D9835 /* SpendingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpendingsViewController.swift; sourceTree = "<group>"; };
 		351C30581A5837660029B271 /* DateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		3532AE6C1A44B2D40073DDF5 /* MyBudget-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MyBudget-Bridging-Header.h"; sourceTree = "<group>"; };
 		354707621A448C3600BB31FC /* MyBudget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBudget.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,7 +56,7 @@
 		354707941A44AE9A00BB31FC /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		357656211A45BD3200D1E4D7 /* SpendingDTO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpendingDTO.swift; sourceTree = "<group>"; };
 		35A60B501A44DF6700C1AAB4 /* AddSpendingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddSpendingViewController.swift; sourceTree = "<group>"; };
-		35A60B511A44DF6700C1AAB4 /* SpendingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpendingsViewController.swift; sourceTree = "<group>"; };
+		35A60B511A44DF6700C1AAB4 /* DailySpendingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailySpendingsViewController.swift; sourceTree = "<group>"; };
 		35A60B551A44DF7100C1AAB4 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		35A60B591A44DF7100C1AAB4 /* SpendingsDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpendingsDataManager.swift; sourceTree = "<group>"; };
 		35A60B5E1A44E13A00C1AAB4 /* DailySpendingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailySpendingTableViewCell.swift; sourceTree = "<group>"; };
@@ -62,6 +65,7 @@
 		35D0EC771A587A9B00442FE6 /* DailySpending.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailySpending.swift; sourceTree = "<group>"; };
 		35D0EC7D1A58ABA100442FE6 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		35D0EC7F1A58B14400442FE6 /* DateExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
+		35D0EC811A58B54E00442FE6 /* DailySpendingsFetchRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailySpendingsFetchRequest.swift; sourceTree = "<group>"; };
 		9DE804FADEDC4B0FBC4D8239 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		D64CA49CE94147EF8A51B2FA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -91,6 +95,7 @@
 				351C30581A5837660029B271 /* DateFormatter.swift */,
 				35D0EC7D1A58ABA100442FE6 /* Constants.swift */,
 				35D0EC7F1A58B14400442FE6 /* DateExtensions.swift */,
+				35D0EC811A58B54E00442FE6 /* DailySpendingsFetchRequest.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -161,7 +166,8 @@
 			isa = PBXGroup;
 			children = (
 				35A60B501A44DF6700C1AAB4 /* AddSpendingViewController.swift */,
-				35A60B511A44DF6700C1AAB4 /* SpendingsViewController.swift */,
+				35A60B511A44DF6700C1AAB4 /* DailySpendingsViewController.swift */,
+				350152731A596FC4006D9835 /* SpendingsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -325,8 +331,9 @@
 			files = (
 				351C30591A5837660029B271 /* DateFormatter.swift in Sources */,
 				354707951A44AE9A00BB31FC /* MainTabBarController.swift in Sources */,
+				350152741A596FC4006D9835 /* SpendingsViewController.swift in Sources */,
 				35D0EC761A5878E200442FE6 /* Spending.swift in Sources */,
-				35A60B531A44DF6700C1AAB4 /* SpendingsViewController.swift in Sources */,
+				35A60B531A44DF6700C1AAB4 /* DailySpendingsViewController.swift in Sources */,
 				35A60B5F1A44E13A00C1AAB4 /* DailySpendingTableViewCell.swift in Sources */,
 				35D0EC741A58789600442FE6 /* MyBudget.xcdatamodeld in Sources */,
 				35A60B5A1A44DF7100C1AAB4 /* CoreDataStack.swift in Sources */,
@@ -335,6 +342,7 @@
 				357656221A45BD3200D1E4D7 /* SpendingDTO.swift in Sources */,
 				35A60B521A44DF6700C1AAB4 /* AddSpendingViewController.swift in Sources */,
 				35D0EC781A587A9B00442FE6 /* DailySpending.swift in Sources */,
+				35D0EC821A58B54E00442FE6 /* DailySpendingsFetchRequest.swift in Sources */,
 				354707681A448C3600BB31FC /* AppDelegate.swift in Sources */,
 				35A60B5D1A44DF7100C1AAB4 /* SpendingsDataManager.swift in Sources */,
 			);

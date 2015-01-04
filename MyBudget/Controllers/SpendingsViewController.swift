@@ -2,54 +2,42 @@
 //  SpendingsViewController.swift
 //  MyBudget
 //
-//  Created by Michal Moskala on 19/12/14.
-//  Copyright (c) 2014 Michal Moskala. All rights reserved.
+//  Created by Michal Moskala on 04/01/15.
+//  Copyright (c) 2015 Michal Moskala. All rights reserved.
 //
 
 import UIKit
 
-class SpendingsViewController: UIViewController, UITableViewDataSource, SpendingsDataManagerDelegate {
+class SpendingsViewController: UIViewController, UITableViewDataSource {
+	
 	@IBOutlet weak var tableView: UITableView!
-	let dataManager: SpendingsDataManager!
+	var dataManager: SpendingsDataManager!
+	var date: NSDate?
+	
+	override func viewDidLoad() {
+		super.viewDidLoad()
+		self.tableView.dataSource = self
+		NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("reloadData"), name: "aaa", object: nil)
+		self.dataManager?.fetchSpendingsForDay(self.date!)
+	}
 
-	required init(coder aDecoder: NSCoder) {
-		dataManager = SpendingsDataManager()
-		super.init(coder: aDecoder)
-		dataManager.delegate = self
+	dynamic func reloadData() {
+		self.tableView.reloadData()
 	}
 	
-  override func viewDidLoad() {
-    super.viewDidLoad()
-		self.tableView.dataSource = self
-  }
+	// MARK: UITableViewDataSource
 	
 	func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		if self.dataManager.dailySpendings != nil {
-			return self.dataManager.dailySpendings!.count
+		if let spendings = self.dataManager.fetchedSpendings {
+			return spendings.count
 		}
-		return 0;
+		return 0
 	}
 	
 	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-		var cell = tableView.dequeueReusableCellWithIdentifier("SpendingsCell") as DailySpendingTableViewCell
-		let dailySpending = self.dataManager.dailySpendings![indexPath.row]
-		cell.setValue(dailySpending.value)
-		cell.setDateLiteral(dailySpending.dateLiteral)
+		let cell = tableView.dequeueReusableCellWithIdentifier("SpendingCell") as UITableViewCell
+		let spending = self.dataManager.fetchedSpendings![indexPath.row]
+		cell.textLabel?.text = spending.date.description
 		return cell
-	}
-	
-	// MARK: segues
-	
-	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-		if segue.identifier == "showAddSpendingVC" {
-			let destinationVC = segue.destinationViewController as AddSpendingViewController
-			destinationVC.dataManager = dataManager
-		}
-	}
-	
-	// MARK: SpendingsDataManagerDelegate
-	
-	func dataManagerDidFetchDailySpendings() {
-		self.tableView.reloadData()
 	}
 }

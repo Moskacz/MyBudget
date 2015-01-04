@@ -11,9 +11,21 @@ import CoreData
 
 class Spending: NSManagedObject {
 
-    @NSManaged var date: NSDate
-    @NSManaged var name: String
-    @NSManaged var value: NSNumber
-    @NSManaged var stringDateDescription: String
+	@NSManaged var date: NSDate
+	@NSManaged var name: String
+	@NSManaged var value: NSNumber
+	@NSManaged var stringDateDescription: String
+	
+}
 
+extension Spending: Printable, DebugPrintable {
+	
+	override var description: String {
+		return "test"
+	}
+	
+	override var debugDescription: String {
+		return "debugtest"
+	}
+	
 }
