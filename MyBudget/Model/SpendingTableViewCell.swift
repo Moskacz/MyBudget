@@ -13,5 +13,4 @@ class SpendingTableViewCell: UITableViewCell {
 	@IBOutlet weak var date: UILabel!
 	@IBOutlet weak var value: UILabel!
 	
-	
 }
