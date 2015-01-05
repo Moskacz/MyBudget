@@ -12,6 +12,7 @@ class SpendingsViewController: UIViewController, UITableViewDataSource {
 	
 	@IBOutlet weak var tableView: UITableView!
 	let dataManager = SpendingsDataManager()
+	let dateFormatter = DateFormatter()
 	var spendings: [Spending]?
 	var date: NSDate?
 	
@@ -39,9 +40,11 @@ class SpendingsViewController: UIViewController, UITableViewDataSource {
 	}
 	
 	func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCellWithIdentifier("SpendingCell") as UITableViewCell
+		let cell = tableView.dequeueReusableCellWithIdentifier("SpendingCell") as SpendingTableViewCell
 		let spending = self.spendings![indexPath.row]
-		cell.textLabel?.text = spending.date.description
+		cell.date.text = self.dateFormatter.fullLengthStringFromDate(spending.date)
+		cell.value.text = spending.value.stringValue
 		return cell
 	}
+	
 }

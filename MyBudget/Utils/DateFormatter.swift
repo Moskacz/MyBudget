@@ -19,4 +19,15 @@ class DateFormatter: NSDateFormatter {
 	required init(coder aDecoder: NSCoder) {
 		super.init(coder: aDecoder)
 	}
+	
+	func shortStringFromDate(date: NSDate) -> String {
+		self.dateFormat = "dd/MM/yyyy"
+		return self.stringFromDate(date)
+	}
+	
+	func fullLengthStringFromDate(date: NSDate) -> String {
+		self.dateFormat = "dd/MM/yyyy\nhh:mm:ss"
+		return self.stringFromDate(date)
+	}	
+	
 }

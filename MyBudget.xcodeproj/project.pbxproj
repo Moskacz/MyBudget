@@ -23,6 +23,7 @@
 		35A60B5A1A44DF7100C1AAB4 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A60B551A44DF7100C1AAB4 /* CoreDataStack.swift */; };
 		35A60B5D1A44DF7100C1AAB4 /* SpendingsDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A60B591A44DF7100C1AAB4 /* SpendingsDataManager.swift */; };
 		35A60B5F1A44E13A00C1AAB4 /* DailySpendingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A60B5E1A44E13A00C1AAB4 /* DailySpendingTableViewCell.swift */; };
+		35C9F1681A5AC0E60036BF07 /* SpendingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C9F1671A5AC0E60036BF07 /* SpendingTableViewCell.swift */; };
 		35D0EC741A58789600442FE6 /* MyBudget.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 35D0EC721A58789600442FE6 /* MyBudget.xcdatamodeld */; };
 		35D0EC761A5878E200442FE6 /* Spending.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D0EC751A5878E200442FE6 /* Spending.swift */; };
 		35D0EC781A587A9B00442FE6 /* DailySpending.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D0EC771A587A9B00442FE6 /* DailySpending.swift */; };
@@ -62,6 +63,7 @@
 		35A60B551A44DF7100C1AAB4 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		35A60B591A44DF7100C1AAB4 /* SpendingsDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpendingsDataManager.swift; sourceTree = "<group>"; };
 		35A60B5E1A44E13A00C1AAB4 /* DailySpendingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailySpendingTableViewCell.swift; sourceTree = "<group>"; };
+		35C9F1671A5AC0E60036BF07 /* SpendingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpendingTableViewCell.swift; sourceTree = "<group>"; };
 		35D0EC731A58789600442FE6 /* MyBudget.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyBudget.xcdatamodel; sourceTree = "<group>"; };
 		35D0EC751A5878E200442FE6 /* Spending.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spending.swift; sourceTree = "<group>"; };
 		35D0EC771A587A9B00442FE6 /* DailySpending.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DailySpending.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 				35D0EC721A58789600442FE6 /* MyBudget.xcdatamodeld */,
 				35D0EC751A5878E200442FE6 /* Spending.swift */,
 				35D0EC771A587A9B00442FE6 /* DailySpending.swift */,
+				35C9F1671A5AC0E60036BF07 /* SpendingTableViewCell.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 				35A60B5A1A44DF7100C1AAB4 /* CoreDataStack.swift in Sources */,
 				35D0EC801A58B14400442FE6 /* DateExtensions.swift in Sources */,
 				35D0EC7E1A58ABA100442FE6 /* Constants.swift in Sources */,
+				35C9F1681A5AC0E60036BF07 /* SpendingTableViewCell.swift in Sources */,
 				357656221A45BD3200D1E4D7 /* SpendingDTO.swift in Sources */,
 				35A60B521A44DF6700C1AAB4 /* AddSpendingViewController.swift in Sources */,
 				35D0EC781A587A9B00442FE6 /* DailySpending.swift in Sources */,
